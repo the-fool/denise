@@ -1,0 +1,25 @@
+<meta name="robots" content="all,follow" />
+<meta name="googlebot" content="index,follow,snippet,archive" />
+<meta name="keywords" content="coding,school,web,bootcamp,software,spokane" />
+<meta name="description"        content="Coding school in Spokane, WA for all experience levels." />
+<meta property="og:type"        content="website" />
+<meta property="og:url"         content="https://deniseprince.com" />
+<meta property="og:description" content="Coding school in Spokane, WA for all experience levels.">
+<meta property="og:image"       content="http://unicorncode.org/img/social_fbook.png" />
+<meta property="og:title"       content="Unicorn Coding Academy" />
+<meta property="og:locale"      content="en_US" />
+
+
+{{ $norm := resources.Get "lib/normalize.css" }}
+{{ $processedNorm := $norm | resources.Fingerprint "sha512" }}
+
+{{ $baseStyle := resources.Get "base.scss" }}
+{{ $processedBaseStyle := $baseStyle | resources.ToCSS | resources.Fingerprint "sha512" }}
+
+<link rel="stylesheet" href="{{ $processedNorm.Permalink }}">
+<link rel="stylesheet" href="{{ $processedBaseStyle.Permalink }}">
+
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">

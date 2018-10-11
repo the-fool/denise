@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no">
+
+  <title>
+    {{ block "title" . }} {{ .Site.Title }} {{ end }}
+  </title>
+
+  {{ partial "head.html" . }}
+
+  {{ block "styles" . }} {{ end }}
+</head>
+
+<body>
+
+  <header>
+    {{ block "header" . }}
+
+    {{ partial "navbar.html" . }}
+
+    {{ end }}
+  </header>
+
+  <main role="main">
+
+    {{ block "main" . }}
+    {{ end }}
+
+  </main>
+
+  {{ block "footer" . }}
+  {{ end }}
+
+  {{ partial "footer.html" }}
+
+  {{ partial "scripts.html" }}
+
+  {{ block "scripts" . }} {{ end }}
+</body>
+
+</html>
