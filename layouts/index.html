@@ -1,7 +1,19 @@
 {{ define "main" }}
 wut
+<div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+{{ range (readDir "static/img" ) }}
+  {{ partial "gallery-figure.html" . }}
+{{ end }}
+</div>
+
 {{ end }}
 
 {{ define "pswp" }}
 {{ partial "pswp.html" . }}
+{{ end }}
+
+{{ define "scripts" }}
+
+<script src="/home.js"></script>
+ 
 {{ end }}

@@ -37,9 +37,10 @@
 
   {{ partial "scripts.html" . }}
 
+  {{ block "pswp" . }} {{ end }}
+  
   {{ block "scripts" . }} {{ end }}
 
-  {{ block "pswp" . }} {{ end }}
 </body>
 
 </html>
