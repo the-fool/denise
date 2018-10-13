@@ -5,10 +5,11 @@ import re
 
 for fname in glob.iglob('static/img/*.jpg'):
     already_done = bool(re.search('\d+x\d+', fname))
-    print(fname)
     if already_done:
         continue
-    # urlify = lambda n: f'static/img/{n}'
+
+    print(f'Processing: {fname}')
+    
     i = Image.open(fname)
     w, h = i.size
     base_fname, extension = fname.split('.')
