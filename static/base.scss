@@ -1,3 +1,9 @@
+$black: #000;
+$grey: #9c9c9c;
+
+$anchor-color: $grey;
+$anchor-visited-color: $black;
+
 html,
 body {
   height: 100%;
@@ -20,6 +26,16 @@ body {
   color: #666;
 }
 
+a {
+  color: $anchor-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $anchor-visited-color;
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
   list-style-image: none;
@@ -35,9 +51,12 @@ header {
   position: relative;
   z-index: 999;
   padding-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 
   #logo {
-    float: left;
     margin-right: 30px;
 
     h1 {
@@ -51,6 +70,18 @@ header {
       font-style: normal;
       font-size: 36px;
       display: inline-block;
+    }
+  }
+
+  #top-nav {
+    li {
+      display: inline-block;
+
+      a {
+        text-transform: lowercase;
+        padding: 10px;
+        display: block;
+      }
     }
   }
 }
