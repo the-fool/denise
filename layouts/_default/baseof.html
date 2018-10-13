@@ -33,11 +33,13 @@
   {{ block "footer" . }}
   {{ end }}
 
-  {{ partial "footer.html" }}
+  {{ partial "footer.html" . }}
 
-  {{ partial "scripts.html" }}
+  {{ partial "scripts.html" . }}
 
   {{ block "scripts" . }} {{ end }}
+
+  {{ block "pswp" . }} {{ end }}
 </body>
 
 </html>
