@@ -22,5 +22,5 @@ const options = {
 };
 
 // Initializes and opens PhotoSwipe
-const gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-gallery.init();
+// const gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+// gallery.init();

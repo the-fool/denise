@@ -1,9 +1,17 @@
 {{ define "main" }}
-wut
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-{{ range (readDir "static/img" ) }}
-  {{ partial "gallery-figure.html" . }}
-{{ end }}
+  <div class="row">
+    {{ range $x := seq 0 3 }}
+    <div class="column">
+
+    {{ range $index, $element := (readDir "static/img" ) }}
+      {{ if eq (mod $index 4) $x }}
+      {{ partial "gallery-figure.html" . }}
+      {{ end }}
+     {{ end }}
+    </div>
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}
