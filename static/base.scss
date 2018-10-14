@@ -2,6 +2,7 @@ $black: #000;
 $grey: #9c9c9c;
 
 $gallery-columns-lg: 3;
+$gallery-gutter: 10px;
 
 $anchor-color: $grey;
 $anchor-visited-color: $black;
@@ -127,10 +128,10 @@ header {
   .column {
     flex: calc(100% / #{$gallery-columns-lg});
     max-width: calc(100% / #{$gallery-columns-lg});
-    padding: 0 4px;
+    padding: 0 calc(#{$gallery-gutter} / 2);
 
     figure {
-      margin: 0;
+      margin: $gallery-gutter 0;
 
       img {
         max-width: 100%;

@@ -3,7 +3,7 @@ import glob
 import os
 import re
 
-for fname in glob.iglob('static/img/*.jpg'):
+for fname in glob.iglob('static/img/**/*.jpg'):
     already_done = bool(re.search('\d+x\d+', fname))
     if already_done:
         continue
