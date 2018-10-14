@@ -8,7 +8,9 @@ if len(sys.argv) is not 2:
     exit()
 
 path = sys.argv[1]
-yaml = '---'
+yaml = f"""---
+image_dir: {path}
+"""
 
 items = []
 
@@ -21,6 +23,7 @@ for img_fname in os.listdir(directory):
       width: {w}
       height: {h}
       caption:
+      description:
 
     """
     items.append(item_string)

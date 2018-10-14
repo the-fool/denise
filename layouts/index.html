@@ -6,7 +6,6 @@
 
     {{ range $index, $element := (readDir "static/img" ) }}
       {{ if eq (mod $index 4) $x }}
-      {{ partial "gallery-figure.html" . }}
       {{ end }}
      {{ end }}
     </div>

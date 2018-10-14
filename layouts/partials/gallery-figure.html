@@ -1,6 +1,11 @@
+{{ $path := printf "/img/%s/%s" .image_dir .context.name }}
+{{ $w := .context.width }}
+{{ $h := .context.height }}
+{{ $size := printf "%dx%d" $w $h }}
+
 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-  <a href="/img/{{.Name}}" itemprop="contentUrl" data-size="600x400">
-    <img src="/img/{{.Name}}" itemprop="thumbnail" alt="Image description" />
+  <a href="{{ $path }}" itemprop="contentUrl" data-size="{{ $size }}">
+    <img src="{{ $path }}" itemprop="thumbnail" alt="Image description" />
   </a>
   <figcaption itemprop="caption description">Image caption</figcaption>
 </figure>
