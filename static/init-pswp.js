@@ -73,8 +73,8 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
 
     // find index of clicked item by looping through all child nodes
     // alternatively, you may define index via data- attribute
-    var clickedGallery = clickedListItem.parentNode,
-      childNodes = clickedListItem.parentNode.childNodes,
+    var clickedGallery = clickedListItem.closest('.my-gallery'),
+      childNodes = clickedGallery.querySelectorAll('figure'),
       numChildNodes = childNodes.length,
       nodeIndex = 0,
       index;
@@ -129,7 +129,7 @@ var initPhotoSwipeFromDOM = function (gallerySelector) {
   };
 
   var openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
-    var pswpElement = document.querySelectorAll('.pswp')[0],
+    var pswpElement = document.querySelector('.pswp'),
       gallery,
       options,
       items;
