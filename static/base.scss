@@ -1,6 +1,8 @@
 $black: #000;
 $grey: #9c9c9c;
 
+$gallery-columns-lg: 3;
+
 $anchor-color: $grey;
 $anchor-visited-color: $black;
 
@@ -123,8 +125,8 @@ header {
 
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 25%;
-    max-width: 25%;
+    flex: calc(100% / #{$gallery-columns-lg});
+    max-width: calc(100% / #{$gallery-columns-lg});
     padding: 0 4px;
 
     figure {
@@ -134,14 +136,6 @@ header {
         max-width: 100%;
         vertical-align: middle;
       }
-    }
-  }
-
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
     }
   }
 

@@ -1,4 +1,6 @@
 {{ define "main" }}
+
+{{ $cols := 3 }}
 {{ $image_dir := .Params.image_dir }}
 {{ $images := .Params.images }}
 
@@ -6,10 +8,10 @@
 
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   <div class="row">
-    {{ range $x := seq 0 3 }}
+    {{ range $x := seq 0 (sub $cols 1) }}
     <div class="column">
     {{ range $index, $element := $images }}
-      {{ if eq (mod $index 4) $x }}
+      {{ if eq (mod $index $cols) $x }}
 
       {{ partial "gallery-figure.html" (dict "context" . "image_dir" $image_dir) }}
       
