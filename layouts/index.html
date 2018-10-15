@@ -1,11 +1,31 @@
 {{ define "main" }}
 <div id="portfolio-container">
 
+  {{ range where .Site.RegularPages "Section" "portfolios" }}
+
+  {{ $img_name := (index .Params.images 0).name }}
+  {{ $img_dir := .Params.image_dir }}
+  {{ $img := printf "/img/%s/%s" $img_dir $img_name }}
+  {{ $title := .Params.title }}
+  <article class="portfoli-item">
+    <a href="{{ .URL }}">
+      <figure>
+        <img src="{{ $img }}">
+        <figcaption>
+          <div class="title">{{ $title }}</div>
+
+        </figcaption>
+      </figure>
+    </a>
+  </article>
+
+  {{ end }}
+
 </div>
 {{ end }}
 
 {{ define "scripts" }}
 
 <script src="/home.js"></script>
- 
+
 {{ end }}
