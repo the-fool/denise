@@ -72,10 +72,17 @@ def make_yaml(path, title=None):
             if current_sum < min_sum:
                 min_group = g
         min_group.append(item)
-
+    #
     # shuffle for looks, so that we don't get a blocky grid
+    # we want to leave the "bottom" of the columns where they're at
+    # bc they are the smallest images, and shuffling a large image into the end 
+    # can potentially cause lopsided columns if the total number of images are not evenly divisible
+    min_length = min([len(g) for g in groups])
+
     for g in groups:
-        random.shuffle(g)
+        subset = g[:min_length]
+        random.shuffle(subset)
+        g[:min_length] = subset
     random.shuffle(groups)
 
     # now stagger them, so they will be doled out into columns

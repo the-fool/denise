@@ -4,8 +4,22 @@
     
     images:
         
+        - name: PaintingPaloma.jpg
+          width: 949
+          height: 1008
+          caption:
+          description:
+
+        
         - name: LeslieScott.jpg
           width: 849
+          height: 1008
+          caption:
+          description:
+
+        
+        - name: Dana.jpg
+          width: 1008
           height: 1008
           caption:
           description:
@@ -18,13 +32,6 @@
           description:
 
         
-        - name: Ruby.jpg
-          width: 1008
-          height: 714
-          caption:
-          description:
-
-        
         - name: Susannah.jpg
           width: 792
           height: 1008
@@ -32,14 +39,14 @@
           description:
 
         
-        - name: PearlPainting.jpg
-          width: 893
+        - name: Violetcape.jpg
+          width: 706
           height: 1008
           caption:
           description:
 
         
-        - name: Hearts.jpg
+        - name: ReeseK.jpg
           width: 1008
           height: 1008
           caption:
@@ -53,28 +60,21 @@
           description:
 
         
-        - name: Leo.jpg
+        - name: Hearts.jpg
           width: 1008
-          height: 756
+          height: 1008
           caption:
           description:
 
         
-        - name: Dana.jpg
-          width: 1008
+        - name: PearlPainting.jpg
+          width: 893
           height: 1008
           caption:
           description:
 
         
         - name: Leya.jpg
-          width: 1008
-          height: 1008
-          caption:
-          description:
-
-        
-        - name: ReeseK.jpg
           width: 1008
           height: 1008
           caption:
@@ -88,16 +88,16 @@
           description:
 
         
-        - name: PaintingPaloma.jpg
-          width: 949
-          height: 1008
+        - name: Leo.jpg
+          width: 1008
+          height: 756
           caption:
           description:
 
         
-        - name: Violetcape.jpg
-          width: 706
-          height: 1008
+        - name: Ruby.jpg
+          width: 1008
+          height: 714
           caption:
           description:
 
