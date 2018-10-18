@@ -129,7 +129,7 @@ header {
     max-width: 50%;
     flex: 50%;
     height: 400px;
-    padding: 0 ($gallery-gutter / 2);
+    padding: ($gallery-gutter / 2);
 
     figure {
       position: relative;

@@ -7,15 +7,6 @@ import random
 
 COLUMNS = 3
 
-if __name__ == '__main__':
-    if len(sys.argv) is not 2:
-        print("Must give path")
-        exit()
-
-    path = sys.argv[1]
-    yaml = make_yaml(path)
-    print(yaml)
-
 def make_yaml(path, title=None):
     yaml = f"""---
     title: {title}
@@ -98,3 +89,14 @@ def make_yaml(path, title=None):
     """
 
     return yaml
+
+
+if __name__ == '__main__':
+    if len(sys.argv) is not 3:
+        print("Must give path and title")
+        exit()
+
+    path = sys.argv[1]
+    title = sys.argv[2]
+    yaml = make_yaml(path, title)
+    print(yaml)
