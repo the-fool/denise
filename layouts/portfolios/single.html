@@ -5,7 +5,7 @@
 {{ $images := .Params.images }}
 
 {{ .Content}}
-
+<h1>{{ .Params.title }}</h1>
 <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   <div class="row">
     {{ range $x := seq 0 (sub $cols 1) }}
