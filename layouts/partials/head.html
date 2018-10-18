@@ -16,8 +16,8 @@
 {{ $baseStyle := resources.Get "base.scss" }}
 {{ $processedBaseStyle := $baseStyle | resources.ToCSS | resources.Fingerprint "sha512" }}
 
-<link rel="stylesheet" href="{{ $processedNorm.Permalink }}">
-<link rel="stylesheet" href="{{ $processedBaseStyle.Permalink }}">
+<link rel="stylesheet" href="{{ $processedNorm.RelPermalink }}">
+<link rel="stylesheet" href="{{ $processedBaseStyle.RelPermalink }}">
 
 <link rel="stylesheet" href="/lib/photoswipe/photoswipe.css">
 <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.css">
