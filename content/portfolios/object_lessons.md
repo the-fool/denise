@@ -1,7 +1,7 @@
 ---
     title: Object Lessons
     image_dir: object_lessons
-    
+    weight: 1 
     images:
         
         - name: ObjectLesson.jpg

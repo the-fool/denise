@@ -1,7 +1,7 @@
 ---
     title: Things I Never Told You
     image_dir: things_i_never_told_you
-    
+    weight: 2 
     images:
         
         - name: Warm Grape Soda, Sailing, Archery, Riflery, Hot Tar, Baby.jpg

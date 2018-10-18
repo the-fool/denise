@@ -1,7 +1,7 @@
 ---
     title: Commissions
     image_dir: commissions
-    
+    weight: 3 
     images:
         
         - name: PaintingPaloma.jpg

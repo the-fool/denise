@@ -1,7 +1,7 @@
 ---
     title: Miscellaneous
     image_dir: misc
-    
+    weight: 5 
     images:
         
         - name: Cindy.jpg

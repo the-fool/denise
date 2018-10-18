@@ -1,7 +1,7 @@
 ---
     title: Captivating Not Captive
     image_dir: captivating_not_captive
-    
+    weight: 1 
     images:
         
         - name: BetteCloseElbowsUp_1152x1152.jpg

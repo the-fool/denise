@@ -1,7 +1,7 @@
 ---
     title: Installations
     image_dir: installations
-    
+    weight: 4 
     images:
         
         - name: TopiaryPaparaziRunning.jpg

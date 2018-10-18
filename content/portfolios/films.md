@@ -1,7 +1,7 @@
 ---
     title: Films
     image_dir: films
-    
+    weight: 6 
     images:
         
         - name: Elsa.jpg
